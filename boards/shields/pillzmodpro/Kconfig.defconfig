@@ -2,11 +2,12 @@
 # SPDX-License-Identifier: MIT
 
 if SHIELD_PILLZMODPRO
+# debug output to check if this is set correctly
 
 config ZMK_KEYBOARD_NAME
-    default "Pillz Mod Pro"
+    default "pillzmodpro"
 
 config SPI
     default y
-    
+
 endif

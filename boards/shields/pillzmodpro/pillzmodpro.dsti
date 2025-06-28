@@ -7,16 +7,8 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include "pillzmodpro_layouts.dtsi"
 &pillzmodpro_layout {
-    transform = <&default_transform>
-
-}
-/ {
-	chosen {
-		zmk,kscan = &pillzmodpro_scan;
-		zmk,physical-layout = &pillzmodpro_layout;
-        matrix-transform = <&default_transform>;
-	};
-
+    transform = <&default_transform>;
+};
 &pro_micro_spi {
 	status = "okay";
 	cs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
@@ -26,17 +18,22 @@
 		gpio-controller;
 		spi-max-frequency = <200000>;
 		reg = <0>;
-    #gpio-cells = <2>;
+    	#gpio-cells = <2>;
 		ngpios = <8>;
 	};
 };
 
-
-aliases {
+/ {
+	chosen {
+		zmk,kscan = &pillzmodpro_scan;
+		zmk,physical-layout = &pillzmodpro_layout;
+        transform = <&default_transform>;
+	};
+	aliases {
 		led-caps = &led_0;
 		led-num = &led_1;
 		led-scroll = &led_2;
-  };
+  	};
 
   leds {
     compatible = "gpio-leds";
@@ -52,7 +49,7 @@ aliases {
     };
   };
 
-	matrix_transform: keymap_transform_0 {
+	default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
 		columns = <7>;
 		rows = <15>;

@@ -1,4 +1,4 @@
-name: zmk-keyboards-urchin
+name: zmk-keyboards-pillzmodpro
 build:
   settings:
     board_root: .

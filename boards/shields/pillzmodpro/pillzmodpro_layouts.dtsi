@@ -1,12 +1,12 @@
 #include <physical_layouts.dtsi>
 
 / {
-    physical_layout0: physical_layout_0 {
+    pillzmodpro_layout: pillzmodpro_layout {
         compatible = "zmk,physical-layout";
-        display-name = "Default";
+        display-name = "pillzmodpro";
 
-        kscan = <&kscan0>;
-        transform = <&matrix_transform0>;
+        //kscan = <&kscan0>;
+        //transform = <&matrix_transform0>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs  75 100    0    0       0     0     0>

@@ -3,7 +3,7 @@ id: pillzmodpro
 name: pillzmodpro
 type: shield
 url: https://github.com/dcpedit/pillzmod
-requires: [pro_micro]
+requires: [nice_nano_v2, pro_micro_spi]
 features:
   - keys
   - studio

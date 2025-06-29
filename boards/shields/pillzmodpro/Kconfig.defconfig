@@ -7,6 +7,9 @@ if SHIELD_PILLZMODPRO
 config ZMK_KEYBOARD_NAME
     default "pillzmodpro"
 
+config ZMK_STUDIO
+    default y
+
 config SPI
     default y
 
